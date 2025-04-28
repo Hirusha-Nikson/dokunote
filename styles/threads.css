@@ -1,0 +1,26 @@
+.threads-container.dark {
+  background-color: #1a1a1a;
+  color: #f6f7f8;
+}
+
+.threads-container.light {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+.anchored-threads {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+.floating-threads {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+.floating-composer {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+

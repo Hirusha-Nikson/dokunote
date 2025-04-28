@@ -1,5 +1,40 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import 'nprogress/nprogress.css';
+
+html {
+  scroll-behavior: smooth;
+}
+body,
+:root {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-button {
+  background: transparent;
+}
+::-webkit-scrollbar-corner:hover {
+  background: transparent;
+}
+::-webkit-scrollbar-button:hover {
+  background: transparent;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -66,7 +101,7 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
+  --sidebar: oklch(0.98 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
@@ -74,12 +109,12 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  --background: oklch(1 0 0);
+  --background: oklch(0.99 0 0);
   --foreground: oklch(0.145 0 0);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: oklch(0.19 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -102,7 +137,7 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
+  --sidebar: oklch(0.17 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.985 0 0);
@@ -120,3 +155,129 @@
     @apply bg-background text-foreground;
   }
 }
+
+.editor {
+  position: absolute;
+  inset: 0;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.bn-editor {
+  padding: 36px 52px;
+  min-height: 100%;
+}
+
+/* For mobile */
+.floating-threads {
+  display: none;
+}
+
+/* For desktop */
+.anchored-threads {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  position: absolute;
+  right: 12px;
+}
+
+@media (max-width: 640px) {
+  .floating-threads {
+    display: block;
+  }
+
+  .anchored-threads {
+    display: none;
+  }
+}
+
+/* styles/globals.css or tailwind.css */
+.floating-threads,
+.anchored-threads,
+.floating-composer {
+  transition: background 0.3s ease;
+}
+
+.dark .floating-threads,
+.dark .anchored-threads,
+.dark .floating-composer {
+  background-color: #1d1d1d; /* dark background */
+  color: white;
+}
+
+.light .floating-threads,
+.light .anchored-threads,
+.light .floating-composer {
+  background-color: #ffffff;
+  color: black;
+}
+
+.comments-main-container {
+  align-items: center;
+  background-color: var(--bn-colors-disabled-background);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  height: 100%;
+  max-width: none;
+  padding: 10px;
+  width: 100%;
+}
+ 
+.comments-main-container .bn-editor {
+  height: 100%;
+  max-width: 700px;
+  overflow: auto;
+  width: 100%;
+}
+ 
+.comments-main-container .settings {
+  display: flex;
+  max-width: 700px;
+  width: 100%;
+}
+ 
+.comments-main-container .settings-select {
+  display: flex;
+  gap: 10px;
+}
+ 
+.comments-main-container .settings-select .bn-toolbar {
+  align-items: center;
+  box-shadow: none;
+}
+ 
+.comments-main-container .settings-select h2 {
+  color: var(--bn-colors-menu-text);
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+  padding-left: 14px;
+}
+
+/* Add specificity to ensure theme styles are applied */
+.threads-container.dark .floating-threads,
+.threads-container.dark .anchored-threads,
+.threads-container.dark .floating-composer {
+  background-color: #1d1d1d; /* dark background */
+  color: white;
+}
+
+.threads-container.light .floating-threads,
+.threads-container.light .anchored-threads,
+.threads-container.light .floating-composer {
+  background-color: #ffffff; /* light background */
+  color: black;
+}
+
+/* Ensure transitions for smooth theme changes */
+.threads-container {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+div[data-radix-popper-content-wrapper] {
+  z-index: 50 !important;
+}
+

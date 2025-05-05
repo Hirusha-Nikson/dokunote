@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 const HeroSection = () => {
   return (
     <div className="relative flex h-screen w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-tl from-background via-background/40 to-background">
-      {/* First floating circle */}
+
       {/* First breathing circle */}
       <motion.div
         initial={{ scale: 1, opacity: 0.8 }}
         animate={{
           scale: [1, 1.08, 1],
-          opacity: [0.8, 1, 0.8],
+          opacity: [0.4, 1, 0.4],
         }}
         transition={{
           duration: 8,
@@ -21,7 +21,7 @@ const HeroSection = () => {
           repeatType: "mirror",
           ease: "easeInOut",
         }}
-        className="absolute -top-36 -left-36 border-64 border-sky-600/60 blur-md size-[500px] -z-10 rounded-full"
+        className="absolute -top-36 -left-36 border-64 border-sky-600 blur-md size-[500px] -z-10 rounded-full"
       />
 
       {/* Second breathing circle */}
@@ -29,7 +29,7 @@ const HeroSection = () => {
         initial={{ scale: 1, opacity: 0.8 }}
         animate={{
           scale: [1, 1.1, 1],
-          opacity: [0.8, 1, 0.8],
+          opacity: [0.6, 1, 0.6],
         }}
         transition={{
           duration: 10,
@@ -37,7 +37,7 @@ const HeroSection = () => {
           repeatType: "mirror",
           ease: "easeInOut",
         }}
-        className="absolute -right-24 bottom-12 border-64 border-sky-600/60 blur-md size-96 -z-10 rounded-full"
+        className="absolute -right-24 bottom-12 border-64 border-sky-600 blur-md size-96 -z-10 rounded-full"
       />
 
       <DotPattern
@@ -55,7 +55,7 @@ const HeroSection = () => {
         }}
         className="-z-10 bg-gradient-to-bl from-sky-800/80 via-sky-800/50 to-background"
       />
-      <div className="w-3/4">
+      <div className="md:w-3/4 px-4 md:px-0">
         <HeroEditorView />
       </div>
     </div>

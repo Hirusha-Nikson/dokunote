@@ -7,7 +7,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
 } from "@/components/ui/sidebar";
-import { Home } from "lucide-react";
 
 import DokunoteLogo from "@/components/assets/Asset 2.png";
 
@@ -17,12 +16,12 @@ const AppSidebarHeader = () => {
       <SidebarMenu className="w-full">
         <SidebarMenuButton
           asChild
-          className="overflow-hidden h-16 w-full items-center"
+          className="overflow-hidden w-full items-center"
         >
           <div className="flex justify-between h-14 w-full items-center">
             <div className="flex items-center">
               <div className="flex space-x-2 items-end">
-                <div className="flex items-center justify-center w-8 h-8 rounded-md bg-[#ebebebf6] dark:bg-[#1d1d1d]">
+                <div className="flex items-center justify-center w-8 h-8 rounded-md">
                   <Image
                     src={DokunoteLogo}
                     alt="Dokunote"
@@ -35,13 +34,13 @@ const AppSidebarHeader = () => {
                 </div>
               </div>
             </div>
-            <div
+            {/* <div
               role="button"
               className="flex items-center space-x-2 cursor-pointer"
               onClick={() => {window.location.href = "/documents"}}
             >
               <Home className="size-4 opacity-70 hover:opacity-100" />
-            </div>
+            </div> */}
           </div>
         </SidebarMenuButton>
       </SidebarMenu>

@@ -5,7 +5,9 @@
 html {
   scroll-behavior: smooth;
 }
-body,
+body {
+  scroll-behavior: smooth;
+}
 :root {
   height: 100%;
 }
@@ -76,6 +78,18 @@ body,
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-shine: shine var(--duration) infinite linear;
+  @keyframes shine {
+  0% {
+    background-position: 0% 0%;
+    }
+  50% {
+    background-position: 100% 100%;
+    }
+  to {
+    background-position: 0% 0%;
+    }
+  }
 }
 
 :root {
@@ -111,6 +125,7 @@ body,
   --sidebar-ring: oklch(0.708 0 0);
   --background: oklch(0.99 0 0);
   --foreground: oklch(0.145 0 0);
+  --marketing: oklch(98.5% 0 0);
 }
 
 .dark {
@@ -145,6 +160,7 @@ body,
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+  --marketing: oklch(26.9% 0 0);
 }
 
 @layer base {
@@ -193,6 +209,7 @@ body,
   }
 }
 
+
 /* styles/globals.css or tailwind.css */
 .floating-threads,
 .anchored-threads,
@@ -225,30 +242,30 @@ body,
   padding: 10px;
   width: 100%;
 }
- 
+
 .comments-main-container .bn-editor {
   height: 100%;
   max-width: 700px;
   overflow: auto;
   width: 100%;
 }
- 
+
 .comments-main-container .settings {
   display: flex;
   max-width: 700px;
   width: 100%;
 }
- 
+
 .comments-main-container .settings-select {
   display: flex;
   gap: 10px;
 }
- 
+
 .comments-main-container .settings-select .bn-toolbar {
   align-items: center;
   box-shadow: none;
 }
- 
+
 .comments-main-container .settings-select h2 {
   color: var(--bn-colors-menu-text);
   margin: 0;
@@ -280,4 +297,3 @@ body,
 div[data-radix-popper-content-wrapper] {
   z-index: 50 !important;
 }
-

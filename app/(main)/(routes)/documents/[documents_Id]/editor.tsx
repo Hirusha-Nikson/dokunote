@@ -14,6 +14,7 @@ import { useCreateBlockNoteWithLiveblocks } from "@liveblocks/react-blocknote";
 import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
 import { Threads } from "./threads";
 
+
 import LoadingSpinner from "@/components/loading-spinner";
 
 
@@ -83,12 +84,13 @@ const EditorPage = ({
 
   const [isLoading, setIsLoading] = useState(true);
 
+  
   const editor: BlockNoteEditor = useCreateBlockNoteWithLiveblocks(
     {
       editable,
       initialContent: initialContent
-        ? (JSON.parse(initialContent) as PartialBlock[])
-        : undefined,
+      ? (JSON.parse(initialContent) as PartialBlock[])
+      : undefined,
       onEditorContentChange: (editor: BlockNoteEditor) => {
         // Schedule the onChange callback to avoid synchronous updates
         setTimeout(() => {
@@ -96,16 +98,15 @@ const EditorPage = ({
         }, 0);
       },
     } as EditorConfig,
-    { mentions: true, offlineSupport_experimental: true }
+    { mentions: true, offlineSupport_experimental: true, ai: true }
   );
-
+  
   useEffect(() => {
     if (initialContent !== undefined) {
       setIsLoading(false);
     }
   }, [initialContent]);
-
-
+  
 
   const { resolvedTheme } = useTheme();
 

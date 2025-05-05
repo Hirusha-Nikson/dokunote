@@ -45,7 +45,7 @@ const AppSidebarDocumentList = () => {
             <SidebarMenuItem className="-ml-2">
               <CollapsibleTrigger asChild>
                 <SidebarMenuButton className="group/personal">
-                  <BookOpen className="size-4 group-hover/personal:stroke-sky-500" />
+                  <BookOpen className="size-4" />
                   <span>Documents</span>
                   <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </SidebarMenuButton>
@@ -57,6 +57,7 @@ const AppSidebarDocumentList = () => {
                       <SidebarMenuButton
                         key={doc._id} // Ensure key is unique and stable
                         onClick={() => router.push(`/documents/${doc._id}`)}
+                        className="text-xs text-muted-foreground"
                       >
                         {doc.title}
                       </SidebarMenuButton>

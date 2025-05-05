@@ -290,3 +290,31 @@ export const getNotificationsById = query({
     return documents;
   }
 });
+
+//Get documents count
+export const getDocumentsCount = query({
+  handler: async (ctx) => {
+    return await ctx.db.query("document").collect();
+  }
+});
+
+export const getOrganizationStats = query({
+  args: {},
+  handler: async (ctx) => {
+    const docs = await ctx.db.query("document").collect();
+
+    // Get all organization IDs (non-empty ones)
+    const orgIds = docs
+      .map(doc => doc.organizationId)
+      .filter(id => id && id !== "");
+
+    // Use a Set to get unique IDs
+    const uniqueOrgIds = Array.from(new Set(orgIds));
+
+    return {
+      totalDocuments: docs.length,
+      totalOrgProjects: orgIds.length,
+      uniqueOrgs: uniqueOrgIds.length,
+    };
+  },
+});

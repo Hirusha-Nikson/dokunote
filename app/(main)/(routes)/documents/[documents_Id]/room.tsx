@@ -18,6 +18,8 @@ type User = {
   id: string;
   name: string;
   avatar: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  color: any;
 };
 
 export function Room({ children }: { children: ReactNode }) {

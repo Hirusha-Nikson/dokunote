@@ -35,7 +35,7 @@ interface NoteCardProps {
     team: boolean;
     ownerId: string;
     important?: "very-important" | "important" | "less-important" | "no-label";
-    _creationTime: string;
+    _creationTime: number;
     source?: string;
     sourcetype?: string;
   };
@@ -138,7 +138,7 @@ export const NoteCard = ({ note, isOwner }: NoteCardProps) => {
             </Button>
           ) : null}
 
-          <CreateMaterial note={note}/>
+          <CreateMaterial note={{ ...note, _creationTime: note._creationTime.toString() }}/>
         
             <DropdownMenu>
               <DropdownMenuTrigger asChild>

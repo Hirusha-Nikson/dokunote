@@ -1,10 +1,12 @@
 "use client";
+
 import { api } from "@/convex/_generated/api";
 import { useConvexAuth, usePaginatedQuery } from "convex/react"
 import DocumentPaginateTable from "./paginate-table";
 import { useSearchParam } from "@/hooks/use-search-param";
 import LoadingSpinner from "@/components/loading-spinner";
 import { Loader } from "lucide-react";
+import { Suspense } from "react";
 
 
 const DocumentPaginate = () => {
@@ -38,11 +40,13 @@ const DocumentPaginate = () => {
 
   return (
     <div>
+      <Suspense fallback={<Loader className="animate-spin w-6 h-6 opacity-70 my-2 mx-auto" />}>
       <DocumentPaginateTable
         documents={results}
         status={status}
         loadMore={loadMore}
       />
+      </Suspense>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { auth, clerkClient } from "@clerk/nextjs/server";
 import { Id } from "@/convex/_generated/dataModel";
 import { api } from "@/convex/_generated/api";
 
+
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
 export async function getDocuments(ids: Id<"document">[]) {
@@ -23,6 +24,7 @@ export async function getUsers() {
         id: user.id,
         name: user.fullName ?? "Anonymous",
         avatar: user.imageUrl,
+        color: user.firstName ?? "Anonymous",
     }));
 
     return users;

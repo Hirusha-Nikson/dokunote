@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
 module.exports = {
   reactStrictMode: false,
   images: {
-    domains: ["img.clerk.com", "i.pravatar.cc"],
+    domains: ["img.clerk.com", "i.pravatar.cc", "images.unsplash.com"],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

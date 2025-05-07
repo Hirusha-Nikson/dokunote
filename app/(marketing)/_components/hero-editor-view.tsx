@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { useConvexAuth } from "convex/react";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 
 const HeroEditorView = () => {
   const { isLoading } = useConvexAuth();
@@ -16,6 +17,8 @@ const HeroEditorView = () => {
   const [showCursor, setShowCursor] = useState(false);
 
   const user = useUser();
+
+  const router = useRouter();
 
   const name = user?.user?.firstName ?? "123456789";
   const nameToNUmber = name
@@ -84,7 +87,9 @@ const HeroEditorView = () => {
                   isLoading ? "cursor-not-allowed" : ""
                 )}
                 onClick={() => {
-                  window.location.href = "/sign-in";
+                  if (!user.isSignedIn) {
+                    router.push("/sign-in");
+                  }
                 }}
               >
                 {user.isSignedIn ? (

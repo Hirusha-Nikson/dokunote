@@ -10,7 +10,7 @@ const NavigationBar = () => {
     <div className="flex min-w-full h-[64px] py-2 px-4 border-b-0 border-[#E5E5E5] dark:border-[#222323] ">
       <div className="flex items-center justify-between w-full gap-4">
         <div className="flex items-center gap-3">
-          <p>Dokunote</p>
+          <p className="text-xl font-semibold">Dokunote</p>
           <SearchInput />
         </div>
         <div className="flex items-center gap-3">

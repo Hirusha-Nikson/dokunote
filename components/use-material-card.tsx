@@ -11,7 +11,6 @@ import { Button } from "./ui/button";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import { toast } from "sonner";
 import { useEffect, useState } from "react";
-import { Separator } from "./ui/separator";
 
 export const UseMaterialCard = () => {
   const params = useParams();
@@ -69,8 +68,7 @@ export const UseMaterialCard = () => {
   return (
     <div className="mb-12 grid grid-cols-1 gap-3 animate-in fade-in-0 duration-300">
       <div className="w-full flex flex-col justify-center items-center gap-0.5">
-        <span className="text-xs text-muted-foreground">{getMaterials.length}</span>
-        <Separator className="max-w-64"/>
+        <span className="text-xs text-muted-foreground">{getMaterials.length} notes are available</span>
         </div>
       {getMaterials?.map((material) => (
         <Card

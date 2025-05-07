@@ -9,18 +9,16 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 
-import { useUser } from "@clerk/nextjs";
+import { UserButton, useUser } from "@clerk/nextjs";
 
-import { MoreVertical, Settings2 } from "lucide-react";
-import Image from "next/image";
+import { Settings2 } from "lucide-react";
+
 
 const AppSidebarFooter = () => {
   const user = useUser();
 
   const { isMobile } = useSidebar()
 
-  const userName = user.user?.firstName || "U"; // Default to "U" if no name is available
-  const userImage = user.user?.imageUrl; // User's image URL
 
   return (
     <SidebarFooter>
@@ -59,27 +57,12 @@ const AppSidebarFooter = () => {
         <SidebarMenuButton asChild className="overflow-hidden">
             <div className="flex justify-between h-14 w-full items-center">
           <div className="flex items-center gap-2">
-            <div className="size-8 bg-transparent/85 rounded-md flex items-center justify-center overflow-hidden">
-              {userImage ? (
-                <Image
-                  src={userImage}
-                  alt="User Avatar"
-                  width={40}
-                  height={40}
-                  className="rounded-md object-cover"
-                />
-              ) : (
-                <span className="text-lg font-bold text-white">
-                  {userName.charAt(0).toUpperCase()}
-                </span>
-              )}
-            </div>
             <div className="flex flex-col">
                 <span className="text-sm font-medium">{user.user?.fullName}</span>
                 <span className="text-xs font-medium truncate opacity-75 w-32">{user.user?.primaryEmailAddress?.emailAddress}</span>
             </div>
           </div>
-          <MoreVertical className="size-4 text-muted-foreground" />
+          <UserButton afterSignOutUrl="/" />
           </div>
         </SidebarMenuButton>
       </SidebarMenu>

@@ -28,6 +28,10 @@ const AppSidebarTools = () => {
     window.open(`/documents/${params.documents_Id}/notes`, "_blank");
   };
 
+  const handleCitesClick = () => {
+    window.open(`/documents/${params.documents_Id}/citations`);
+  };
+
 
   return (
     <SidebarGroup>
@@ -53,9 +57,9 @@ const AppSidebarTools = () => {
             </SidebarMenuButton>
             </LinksDialogScreen>
 
-            <SidebarMenuButton className="flex items-center">
+            <SidebarMenuButton className="flex items-center" onClick={() => {handleCitesClick()}}>
               <Replace className="size-4" />
-              <span className="text-sm">Bibliography</span>
+              <span className="text-sm">Citations</span>
             </SidebarMenuButton>
 
             <SidebarMenuButton className="flex items-center">

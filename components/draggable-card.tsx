@@ -72,7 +72,7 @@ export function FloatingDraggable() {
         onTouchStart={handleTouchStart}
       >
         <h3 className="font-semibold">
-          {isDragging ? "Stowpppppp" : "🧩 Drag Me"}
+          {isDragging ? "Used Material" : "Used Material"}
         </h3>
       </div>
       <div className="p-4 overflow-y-scroll h-full">

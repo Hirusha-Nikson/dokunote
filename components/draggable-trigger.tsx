@@ -69,7 +69,7 @@ export const DraggableToggleButton = () => {
           <Magnet className="size-4" />
         </Button>
 
-        {showBadge && !open && (
+        {showBadge && !open && getMaterials?.length !== 0 && (
           <span className="absolute -top-2 -right-2">
             <Badge className="text-[8px] bg-red-500 text-white rounded-full px-1 py-0.5">
               New

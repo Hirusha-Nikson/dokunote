@@ -41,8 +41,8 @@ export const PdfFileUploadPage = () => {
         <div className="flex flex-col w-full p-4">
           <h1>Upload a PDF</h1>
           <p className="text-sm text-muted-foreground">
-            You can create a note for your document here for further uses. Also
-            you can share your notes with your team.
+            Upload a PDF file and summarize it with AI,
+            Then create a note for your document here for further uses.
           </p>
         </div>
         <div className="flex items-center justify-end w-full p-4">

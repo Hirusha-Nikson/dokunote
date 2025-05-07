@@ -4,6 +4,7 @@ import { api } from "@/convex/_generated/api";
 import { useMutation } from "convex/react";
 
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function TeamToggle({ note }: { note: any }) {
   const toggleTeamStatus = useMutation(api.notes.toggleTeamStatus);
 

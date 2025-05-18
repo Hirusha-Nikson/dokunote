@@ -73,17 +73,20 @@ const Header = () => {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-64">
               <DropdownMenuItem>
-                <div className="flex items-center justify-between w-full gap-8">
-                  {user.isSignedIn && (
+                {user.isSignedIn ? (
+                  <div className="flex items-center justify-between w-full gap-8">
+                  
                     <div className="flex flex-col overflow-hidden">
                       <p className="font-semibold">{user.user?.fullName}</p>
                       <p className="text-sm text-muted-foreground truncate">{user.user?.primaryEmailAddress?.emailAddress}</p>
                     </div>
-                  )}
+                  
                   <div>
                     <UserButton afterSignOutUrl="/" />
                   </div>
-                </div>
+                </div>) : (
+                  <Button onClick={handleLoginClick}>Login</Button>
+                )}
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem onSelect={(e) => e.preventDefault()}>

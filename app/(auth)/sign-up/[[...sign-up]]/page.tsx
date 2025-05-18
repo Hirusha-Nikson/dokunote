@@ -12,7 +12,7 @@ export default function SignUpPage() {
             </div>
       <SignUp
         signInUrl="/sign-in"
-        afterSignUpUrl="/documents"
+        afterSignUpUrl="/"
       />
     </div>
   );

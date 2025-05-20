@@ -38,9 +38,9 @@ export const PdfFileUploadPage = () => {
 
   return (
     <div className="flex flex-col mt-4 w-full mx-auto">
-      <div className="flex w-full items-center justify-between border border-muted rounded-2xl">
-        <div className="flex flex-col w-full p-4">
-          <h1>Upload a PDF</h1>
+      <div className="flex flex-col md:flex-row w-full items-center justify-between border border-muted rounded-2xl">
+        <div className="flex flex-col w-full p-4 gap-2">
+          <h1 className="font-semibold">Upload a PDF</h1>
           <p className="text-sm text-muted-foreground">
             Upload a PDF file and summarize it with AI, Then create a note for
             your document here for further uses.

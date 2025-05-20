@@ -32,11 +32,12 @@ const EditorHeader = ({ title, isOrganization }: EditorHeaderProps) => {
       {isMobile ? (
         <div className="flex min-w-full h-[64px] py-2 px-4 border-b bg-sidebar text-foreground border-b-[#E5E5E5] dark:border-[#222323] top-0 fixed z-50">
           <div className="flex items-center justify-between w-full">
-            <div className="flex items-center gap-4 justify-between w-full pr-2">
+            <div className="flex items-center gap-4 justify-between w-full">
               <SidebarTrigger className="opacity-80 hover:opacity-90" />
+              <div className="flex items-center gap-2">
               {isOrganization && <Inbox />}
               <DraggableToggleButton/>
-              </div>
+
             <div className="flex items-center">
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -49,7 +50,7 @@ const EditorHeader = ({ title, isOrganization }: EditorHeaderProps) => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   align="end"
-                  className="w-80 ml-2 transition-all duration-300 ease-in-out"
+                  className=" ml-2 transition-all duration-300 ease-in-out"
                   forceMount={true}
                   side="top"
                   sideOffset={4}
@@ -58,11 +59,18 @@ const EditorHeader = ({ title, isOrganization }: EditorHeaderProps) => {
                     <Avatars />
                   </DropdownMenuItem>
                   <DropdownMenuItem>
-                  {isOrganization && <Inbox />}
+                    <OrganizationSwitcher
+                  afterCreateOrganizationUrl="/documents"
+                  afterLeaveOrganizationUrl="/documents"
+                  afterSelectOrganizationUrl="/documents"
+                  afterSelectPersonalUrl="/documents"
+                />
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             </div>
+            </div>
+          </div>
           </div>
         </div>
       ) : (
@@ -85,7 +93,7 @@ const EditorHeader = ({ title, isOrganization }: EditorHeaderProps) => {
             <div className="flex items-center gap-4">
 
               {isOrganization && <Inbox />}
-              
+ 
               <DraggableToggleButton/>
               <div className="w-8 overflow-hidden flex items-center scale-150 rounded-md">
                 <OrganizationSwitcher

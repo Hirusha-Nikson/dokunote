@@ -48,10 +48,10 @@ export const NotesPage = () => {
 
   return (
     <div className="flex flex-col mt-4 w-full mx-auto">
-      <div className="flex w-full items-center justify-between border border-muted rounded-2xl">
+      <div className="flex flex-col md:flex-row w-full items-center justify-between border border-muted rounded-2xl">
         
         <div className="flex flex-col w-full p-4">
-           <h1>Create a note</h1>
+           <h1 className="font-semibold ">Create a note</h1>
             <p className="text-sm text-muted-foreground">
               You can create a note for your document here for further uses. Also
               you can share your notes with your team.

@@ -48,7 +48,7 @@ const AppSidebarFooter = () => {
                 <span className="text-xs font-light">Change between light and dark themes or leave it as your system theme</span>
               </div>
               <div>
-                <ModeToggle />
+                <ModeToggle variant="secondary"/>
               </div>
               </div>
             </DropdownMenuItem>

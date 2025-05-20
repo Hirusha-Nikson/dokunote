@@ -1,8 +1,8 @@
 "use client";
 import { Id } from "@/convex/_generated/dataModel";
 import DocumentMenu from "../_components/paginate-menu";
-import { Button } from "@/components/ui/button";
-import { Sparkle } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { Sparkle } from "lucide-react";
 
 interface EditorCoverProps {
   title: string;
@@ -20,14 +20,14 @@ const EditorCover = ({ title, createdAt, documentId }: EditorCoverProps) => {
           <p className="text-xs text-muted-foreground">Created at {createdAt}</p>
         </div>
         <div className="flex gap-2 group-hover:opacity-100 opacity-80 transition-all duration-500">
-          <Button
+          {/* <Button
             variant="outline"
             className="px-3 py-1 rounded text-xs text-foreground hover:bg-muted hover:text-primary transition-all duration-300 ease-in-out"
             onClick={() => {}}
           >
             <Sparkle className="mb-3 -mr-2 size-2.5" />
             <Sparkle className="mr-1 size-4" /> Ask AI
-          </Button>
+          </Button> */}
           <DocumentMenu documentId={documentId} title={title}/>
         </div>
       </div>

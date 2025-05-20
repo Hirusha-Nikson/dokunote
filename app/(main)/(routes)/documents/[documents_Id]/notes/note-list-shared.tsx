@@ -24,7 +24,7 @@ export const NoteListShared = () => {
     <div className="flex flex-col mt-8 w-full mx-auto">
       <div className="flex items-center gap-1">
         <History className="size-4 text-muted-foreground" />
-        <p className="text-sm font-light text-muted-foreground">Shared Notes{sharedNotes && sharedNotes.length}</p>
+        <p className="text-sm font-light text-muted-foreground">Shared Notes {sharedNotes && sharedNotes.length}</p>
       </div>
 
       <div className="flex flex-col gap-4 mt-4">

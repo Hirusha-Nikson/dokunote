@@ -24,12 +24,12 @@ export const CitationsGenerator = ({setLoad} : {setLoad: (loading: boolean) => v
 
     return (
         <div className="flex flex-col mt-4 w-full mx-auto">
-      <div className="flex w-full items-center justify-between border border-muted rounded-2xl">
+      <div className="flex w-full flex-col md:flex-row items-center justify-between border border-muted rounded-2xl">
         
         <div className="flex flex-col w-full p-4 space-y-2">
-           <h1>Create a Cite for {filteredMaterials?.length} materials</h1>
+           <h1 className="font-semibold">Create Cites for {filteredMaterials?.length} materials</h1>
 
-           <p className="text-sm text-muted-foreground">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, quidem libero. Debitis saepe quo est?</p>
+           <p className="text-sm text-muted-foreground">You can create a citation for each material. Select a citation format and click generate.</p>
 
           
             <div className="grid grid-cols-4 w-full gap-2">

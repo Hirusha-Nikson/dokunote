@@ -14,7 +14,6 @@ import { useCreateBlockNoteWithLiveblocks } from "@liveblocks/react-blocknote";
 import { BlockNoteEditor, PartialBlock } from "@blocknote/core";
 import { Threads } from "./threads";
 
-
 import LoadingSpinner from "@/components/loading-spinner";
 
 
@@ -83,7 +82,6 @@ const EditorPage = ({
   }
 
   const [isLoading, setIsLoading] = useState(true);
-
   
   const editor: BlockNoteEditor = useCreateBlockNoteWithLiveblocks(
     {
@@ -171,6 +169,7 @@ return () => clearInterval(intervals);
   const currentTheme =
     resolvedTheme === "dark" ? darkCustomTheme : lightDefaultTheme;
 
+
   return (
     <div className="min-h-screen bg-background">
       {isLoading ? (
@@ -179,6 +178,7 @@ return () => clearInterval(intervals);
         </div>
       ) : (
         <>
+
           <BlockNoteView
             editable
             editor={editor}

@@ -24,7 +24,7 @@ const PdfIdPage = () => {
     },[getPdf])
 
     return (
-        <div className="grid grid-cols-2 w-full h-full overflow-hidden mt-[64px] gap-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full overflow-hidden mt-[64px] gap-3">
         <ChatPromptPage/>
         <PdfPreview fileUrl={getPdf?.fileUrl || ""}/>
         </div>

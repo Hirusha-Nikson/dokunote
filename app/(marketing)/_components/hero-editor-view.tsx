@@ -90,6 +90,9 @@ const HeroEditorView = () => {
                   if (!user.isSignedIn) {
                     router.push("/sign-in");
                   }
+                  if (user.isSignedIn) {
+                    router.push("/documents");
+                  }
                 }}
               >
                 {user.isSignedIn ? (

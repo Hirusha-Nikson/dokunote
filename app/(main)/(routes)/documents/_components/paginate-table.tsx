@@ -45,7 +45,7 @@ const DocumentPaginateTable = ({
                 {documents.length === 0 ? (
                     <TableBody>
                         <TableRow className="hover:bg-transparent dark:hover:bg-transparent border-none">
-                            <TableCell colSpan={4} className="text-center opacity-60">No documents found . Make sure you are in either Organization or Personal account</TableCell>
+                            <TableCell colSpan={4} className="text-center opacity-60">No documents found.</TableCell>
                         </TableRow>
                     </TableBody>
                 ): (

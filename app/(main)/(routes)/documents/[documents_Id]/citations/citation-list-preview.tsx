@@ -87,30 +87,25 @@ const CitationListPreview = () => {
           ))}
         </TableBody>
       </Table>
-      <div className="">
+      {/* <div className="">
          <Button
-  // onClick={() => {
-  //   const formatted = citationList
-  //     ?.map((c) => `• ${c.citationContent}`)
-  //     .join("\n\n");
-
-  //   if (formatted) {
-  //     sessionStorage.setItem("bulkCitations", formatted);
-  //     toast.success("All citations ready to insert into your document!");
-  //   } else {
-  //     toast.error("No citations available to insert.");
-  //   }
-  // }}
   onClick={() => {
-    sessionStorage.setItem("bulkCitations", citationList.map((c) => `• ${c.citationContent}`).join("\n\n"));
-    toast.success("All citations ready to insert into your document!");
-    console.log(citationList.map((c) => `• ${c.citationContent}`).join("\n\n"));
+    const formatted = citationList
+      ?.map((c) => `• ${c.citationContent}`)
+      .join("\n\n");
+
+    if (formatted) {
+      sessionStorage.setItem("bulkCitations", formatted);
+      toast.success("All citations ready to insert into your document!");
+    } else {
+      toast.error("No citations available to insert.");
+    }
   }}
 >
-  Generate citations
+  Add citations to document
 </Button>
 
-      </div>
+      </div> */}
     </div>
   );
 };

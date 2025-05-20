@@ -47,7 +47,7 @@ const AppSidebarTools = () => {
               className="flex items-center"
             >
               <PencilLine className="size-4" />
-              <span className="text-sm">Quick Notes</span>
+              <span className="text-sm">Notes</span>
             </SidebarMenuButton>
 
             <LinksDialogScreen>
@@ -72,7 +72,7 @@ const AppSidebarTools = () => {
             className="flex items-center"
             >
               <Bot className="size-4" />
-              <span className="text-sm">Ai PDF</span>
+              <span className="text-sm">PDF Summarizer</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

@@ -10,11 +10,11 @@ const NavigationBar = () => {
     <div className="flex min-w-full h-[64px] py-2 px-4 border-b-0 border-[#E5E5E5] dark:border-[#222323] ">
       <div className="flex items-center justify-between w-full gap-4">
         <div className="flex items-center gap-3">
-          <p className="text-xl font-semibold">Dokunote</p>
+          <p className="text-xl font-semibold hidden md:block">Dokunote</p>
           <SearchInput />
         </div>
-        <div className="flex items-center gap-3">
-          <ModeToggle/>
+        <div className="flex items-center gap-2 md:gap-3">
+          <ModeToggle variant="secondary"/>
           <div className="w-8 overflow-hidden flex items-center scale-150 rounded-md">
           <OrganizationSwitcher
             afterCreateOrganizationUrl="/documents"

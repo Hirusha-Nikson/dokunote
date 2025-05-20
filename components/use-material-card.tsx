@@ -77,7 +77,7 @@ export const UseMaterialCard = () => {
           <CardHeader>
             <div className="flex justify-between items-center">
               <div className="flex gap-2 items-center">
-                <p className="font-light text-xs line-clamp-1 truncate">{material.source}</p>
+                <p className="font-light text-xs line-clamp-1 truncate">{material.sourcetype}</p>
                 {clickedCards[material._id] ? (
                   <CheckCheck className="size-4 text-foreground" />
                 ) : null}

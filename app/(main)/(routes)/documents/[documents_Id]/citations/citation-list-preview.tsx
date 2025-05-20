@@ -10,10 +10,11 @@ import {
 } from "@/components/ui/table";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
-import { useQuery } from "convex/react";
-import { Loader, MoreVertical } from "lucide-react";
+import { useMutation, useQuery } from "convex/react";
+import { Copy, Loader, Trash} from "lucide-react";
 import { useParams } from "next/navigation";
 import MarkdownPreview from "@uiw/react-markdown-preview";
+import { toast } from "sonner";
 
 const CitationListPreview = () => {
   const params = useParams();
@@ -23,6 +24,9 @@ const CitationListPreview = () => {
   const citationList = useQuery(api.citations.getCitationsByDocumentId, {
     documentId: documents_Id,
   });
+
+  const remove = useMutation(api.citations.removeCitation);
+
 
   if (!citationList) {
     return (
@@ -56,14 +60,57 @@ const CitationListPreview = () => {
                 />
               </TableCell>
               <TableCell className="text-right">
-                <Button variant={"ghost"} size={"icon"}>
-                  <MoreVertical className="size-4 text-muted-foreground" />
+                <Button variant={"ghost"} size={"icon"} onClick={() => {
+                  navigator.clipboard.writeText(citation.citationContent)
+                  .then(() => {
+                    toast.success("Citation copied to clipboard!");
+                  })
+                  .catch(() => {
+                    toast.error("Failed to copy citation. Please try again.");
+                  })
+                  }}>
+                  <Copy className="size-4 text-muted-foreground"/>
+                </Button>
+                <Button variant={"ghost"} size={"icon"} onClick={() => {
+                  remove({citationId: citation._id})
+                  .then(() => {
+                    toast.success("Citation removed successfully!");
+                  })
+                  .catch(() => {
+                    toast.error("Failed to remove citation. Please try again.");
+                  })
+                  }}>
+                  <Trash className="size-4 text-muted-foreground"/>
                 </Button>
               </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
+      <div className="">
+         <Button
+  // onClick={() => {
+  //   const formatted = citationList
+  //     ?.map((c) => `• ${c.citationContent}`)
+  //     .join("\n\n");
+
+  //   if (formatted) {
+  //     sessionStorage.setItem("bulkCitations", formatted);
+  //     toast.success("All citations ready to insert into your document!");
+  //   } else {
+  //     toast.error("No citations available to insert.");
+  //   }
+  // }}
+  onClick={() => {
+    sessionStorage.setItem("bulkCitations", citationList.map((c) => `• ${c.citationContent}`).join("\n\n"));
+    toast.success("All citations ready to insert into your document!");
+    console.log(citationList.map((c) => `• ${c.citationContent}`).join("\n\n"));
+  }}
+>
+  Generate citations
+</Button>
+
+      </div>
     </div>
   );
 };

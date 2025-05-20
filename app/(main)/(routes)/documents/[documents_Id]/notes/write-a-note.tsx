@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { api } from "@/convex/_generated/api";
 import { Id } from "@/convex/_generated/dataModel";
@@ -19,10 +20,11 @@ export const CreateNote = ({ onClose }: { onClose: () => void }) => {
   
     const [isCreating, setIsCreating] = useState(false);
     const [noteContent, setNoteContent] = useState("");
+    const [noteSource, setNoteSource] = useState("");
   
-    const onNoteSubmit = (content: string) => {
+    const onNoteSubmit = (content: string, source: string) => {
       setIsCreating(true);
-      createNote({ id: documents_Id as Id<"document">, content, important: "no-label" })
+      createNote({ id: documents_Id as Id<"document">, content, important: "no-label", source })
         .then(() => {   
           toast.success("Note created successfully!");
         })
@@ -43,6 +45,13 @@ export const CreateNote = ({ onClose }: { onClose: () => void }) => {
             </CardDescription>
           </CardHeader>
           <CardContent>
+            <Input
+            type="text"
+            placeholder="Soucre (optional)"
+            className="mb-2"
+            onChange={(e) => setNoteSource(e.target.value)}
+            value={noteSource}
+            />
             <Textarea
               placeholder="Write your note here..."
               className="resize-y min-h-24"
@@ -58,8 +67,7 @@ export const CreateNote = ({ onClose }: { onClose: () => void }) => {
               Cancel
             </Button>
             <Button 
-            variant="dokunote"
-            onClick={() => onNoteSubmit(noteContent)}
+            onClick={() => onNoteSubmit(noteContent, noteSource)}
             disabled={isCreating}
             >
               {isCreating ? "Creating..." : "Create"}

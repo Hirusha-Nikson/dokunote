@@ -124,7 +124,6 @@ export const CreateAINote = ({ onAiClose }: { onAiClose: () => void }) => {
               onChange={inputLink}
             />
             <Button
-              variant="dokunote"
               onClick={onSummarizeClick}
               disabled={isSummarizing || link.length === 0}
             >
@@ -158,7 +157,6 @@ export const CreateAINote = ({ onAiClose }: { onAiClose: () => void }) => {
             Cancel
           </Button>
           <Button
-            variant="dokunote"
             onClick={() => {
               onCreateAiNote(noteAiContent);
             }}

@@ -106,7 +106,65 @@ const EditorPage = ({
       setIsLoading(false);
     }
   }, [initialContent]);
+
   
+useEffect(() => {
+  const interval = setInterval(() => {
+    const content = sessionStorage.getItem("materialToInsert");
+    if (editor && content) {
+      editor.insertBlocks(
+        [
+          {
+            type: "paragraph",
+            props: {},
+            content: [
+              {
+                type: "text",
+                text: content,
+                styles: {},
+              },
+            ],
+          },
+        ],
+        editor.topLevelBlocks[editor.topLevelBlocks.length - 1].id
+      );
+      sessionStorage.removeItem("materialToInsert");
+      clearInterval(interval); // stop polling
+    }
+  }, 200); // check every 200ms
+
+  return () => clearInterval(interval);
+}, [editor]);
+
+
+useEffect(() => {
+  const intervals = setInterval(() => {
+    const bulkCitations = sessionStorage.getItem("bulkCitations");
+    if (editor && bulkCitations) {
+      editor.insertBlocks(
+        [
+          {
+            type: "paragraph",
+            props: {},
+            content: [
+              {
+                type: "text",
+                text: bulkCitations,
+                styles: {},
+              },
+            ],
+          },
+        ],
+        editor.topLevelBlocks[editor.topLevelBlocks.length - 1]?.id
+      );
+      sessionStorage.removeItem("bulkCitations");
+      clearInterval(intervals);
+      console.log("Bulk citations inserted");
+    }
+  }, 200);
+
+return () => clearInterval(intervals);
+}, [editor]);
 
   const { resolvedTheme } = useTheme();
 

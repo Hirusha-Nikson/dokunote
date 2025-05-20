@@ -43,13 +43,6 @@ export const PdfPaginateDropdown = ({fileId, documentId}: PdfPaginateDropdownPro
         <DropdownMenuItem
           className="cursor-pointer"
           onSelect={(e) => e.preventDefault()}
-          onClick={(e) => e.stopPropagation()}
-        >
-          Share
-        </DropdownMenuItem>
-        <DropdownMenuItem
-          className="cursor-pointer"
-          onSelect={(e) => e.preventDefault()}
           onClick={
             (e) => {e.stopPropagation();
               handleDelete({ documentId, fileId })

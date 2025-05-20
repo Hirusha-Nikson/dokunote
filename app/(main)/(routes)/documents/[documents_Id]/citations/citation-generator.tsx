@@ -14,7 +14,7 @@ export const CitationsGenerator = ({setLoad} : {setLoad: (loading: boolean) => v
   const materials =  useQuery(api.useMaterials.getMaterialsByDocumentId,{
     documentId: documentId as Id<"document">
   });
-  const filteredMaterials = materials?.filter((material) => material.sourcetype);
+  const filteredMaterials = materials?.filter((material) => material.source);
   
   const veryImportant = filteredMaterials?.filter((material) => material.important === "very-important");
   const important = filteredMaterials?.filter((material) => material.important === "important");
@@ -78,11 +78,18 @@ export const CitationsGenerator = ({setLoad} : {setLoad: (loading: boolean) => v
               
       </div>
             
-        </div> 
-        <div className="flex items-center justify-end w-full p-4 gap-2"> 
+        </div>
+        {filteredMaterials?.length === 0 ? (
+          <div className="flex items-center justify-center w-full my-4">
+            <p className="text-xs text-center text-muted-foreground">No materials found</p>
+          </div>
+        ): (
+          <div className="flex items-center justify-end w-full p-4 gap-2"> 
             
           <CitationFormatSelector id={documentId as Id<"document">} setLoading={setLoad}/>
       </div>
+        )} 
+        
           
       </div>
       

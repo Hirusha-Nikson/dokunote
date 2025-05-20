@@ -9,7 +9,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-import { Bot, Link, PencilLine, Replace, Users2 } from "lucide-react";
+import { Bot, Link, PencilLine, Replace } from "lucide-react";
 
 import { Separator } from "@/components/ui/separator";
 import { useParams, useRouter } from "next/navigation";
@@ -25,11 +25,11 @@ const AppSidebarTools = () => {
   };
 
   const handleNotesClick = () => {
-    window.open(`/documents/${params.documents_Id}/notes`, "_blank");
+    routes.push(`/documents/${params.documents_Id}/notes`);
   };
 
   const handleCitesClick = () => {
-    window.open(`/documents/${params.documents_Id}/citations`);
+    routes.push(`/documents/${params.documents_Id}/citations`);
   };
 
 
@@ -62,10 +62,10 @@ const AppSidebarTools = () => {
               <span className="text-sm">Citations</span>
             </SidebarMenuButton>
 
-            <SidebarMenuButton className="flex items-center">
+            {/* <SidebarMenuButton className="flex items-center">
               <Users2 className="size-4" />
               <span className="text-sm">Assign Task</span>
-            </SidebarMenuButton>
+            </SidebarMenuButton> */}
 
             <SidebarMenuButton
             onClick={handlePDFclick}

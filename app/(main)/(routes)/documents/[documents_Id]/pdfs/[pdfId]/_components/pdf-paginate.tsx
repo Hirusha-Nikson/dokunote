@@ -28,7 +28,7 @@ export const PDFPaginatePage = () => {
 
   if (!pdfs || pdfs.length === 0) {
     return (
-      <div className="flex items-center justify-center h-full">
+      <div className="flex items-center justify-center h-full mt-[64px] text-muted-foreground text-sm">
         No PDF file founded
       </div>
     );

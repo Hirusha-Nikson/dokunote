@@ -60,7 +60,6 @@ export const NotesPage = () => {
         <div className="flex items-center justify-end w-full p-4 gap-2">
             <Button 
             onClick={handleCreateNoteOpen}
-            variant="dokunote"
             className="flex items-center justify-center"
             disabled={isOpenWriteNote || isOpenAiNote}
             >
@@ -69,7 +68,6 @@ export const NotesPage = () => {
 
             <Button 
             onClick={handleAiNoteOpen}
-            variant="dokunote"
             className="flex items-center justify-center"
             disabled={isOpenWriteNote || isOpenAiNote}
             >

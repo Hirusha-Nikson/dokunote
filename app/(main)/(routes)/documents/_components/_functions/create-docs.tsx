@@ -83,7 +83,6 @@ const CreateDocument = ({
         <DialogFooter>
           <Button
             onClick={() => onDialogSubmit(documentTitle, "")}
-            variant={'dokunote'}
             type="submit"
             disabled={isCreating}
           >

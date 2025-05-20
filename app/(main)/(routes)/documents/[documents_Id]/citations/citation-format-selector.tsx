@@ -85,7 +85,7 @@ export const CitationFormatSelector = ({ id, setLoading }: CitationFormatSelecto
           {format
             ? citationFormats.find((citationFormats) => citationFormats.format === format)?.label
             : "Select a citation format..."}
-          <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+          <ChevronsUpDown className="h-4 w-4 shrink-0 opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
@@ -117,8 +117,10 @@ export const CitationFormatSelector = ({ id, setLoading }: CitationFormatSelecto
     </Popover>
     <Button
       onClick={handleGenarateCitation}
-      disabled={!format}>
-        Click
+      disabled={!format}
+      className="ml-2"
+      >
+        Generate
       </Button>
     </div>
   );

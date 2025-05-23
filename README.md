@@ -1,18 +1,18 @@
 
-## Getting Started Dokunote
+# Getting Started Dokunote
 
 https://dokunote-org.vercel.app/
 
-###First, Installation
+##First, Installation
 ```bash
 npm install
 ```
 
-###Second, run the development server:
+##Second, run the development server:
 ```bash
 npm run dev
 ```
-###Third, run the convex:
+##Third, run the convex:
 ```bash
 npx convex dev
 ```

@@ -140,7 +140,7 @@ export const CreateAINote = ({ onAiClose }: { onAiClose: () => void }) => {
           ) : (null)
           }
           <MarkdownPreview 
-          source={noteAiContent} 
+          source={noteAiContent}
           className="py-2 bg-transparent"
           style={{
             backgroundColor: "transparent",

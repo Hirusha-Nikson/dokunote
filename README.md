@@ -1,6 +1,6 @@
 # Getting Started Dokunote
 
-<img src="https://github.com/Hirusha-Nikson/dokunote/blob/main/components/assets/DokunoteIconTP.png?raw=true" width="100%">
+<img src="https://github.com/Hirusha-Nikson/dokunote/blob/main/components/assets/DokunoteIconTP.png?raw=true" width="10%">
 
 https://dokunote-org.vercel.app/
 

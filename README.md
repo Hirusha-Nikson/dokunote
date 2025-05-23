@@ -12,9 +12,14 @@ Second, run the development server:
 ```bash
 npm run dev
 ```
-Third, run the convex:
+
+Open (http://localhost:{Port}) with your browser to see the result.
+
+
+If there is an issue on database. Try this
 ```bash
 npx convex dev
 ```
+Then save the convex schema (convex/schema.ts) as it is.
 
-Open (http://localhost:{Port}) with your browser to see the result.
+

@@ -2,8 +2,9 @@
 ## Getting Started
 
 First, Installation
-
+```bash
 npm install
+```
 
 Second, run the development server:
 

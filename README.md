@@ -1,5 +1,6 @@
-
 # Getting Started Dokunote
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=100&color=6948fa&section=header&reversal=false&animation=fadeIn" width="100%">
 
 https://dokunote-org.vercel.app/
 

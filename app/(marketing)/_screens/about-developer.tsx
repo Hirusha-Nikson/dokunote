@@ -23,11 +23,11 @@ export default function AboutDeveloper() {
 
         {/* Replace with your image path in the public folder */}
         <image
-          href="/dp.jpg"
+          href="/nikz.jpg"
           clipPath="url(#blobClip)"
           width="200"
           height="200"
-          className="grayscale hover:grayscale-0 transition duration-500 invert-10 dark:hover:invert-0"
+          className="w-full h-full object-cover hover:grayscale-50 transition-all duration-300"
         />
       </svg>
 </div>

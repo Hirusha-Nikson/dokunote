@@ -79,12 +79,15 @@ Or extract the ZIP file
    ```
 
 3. **Install the dependencies**:
+
    Using npm
    ```bash
    > npm install
    ```
 
-###Usage
+
+### Usage
+
 Run the project with:
 
 Using npm:

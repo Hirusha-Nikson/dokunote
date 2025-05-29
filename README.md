@@ -12,11 +12,11 @@
 
 ### Built with the tools and technologies:
 
-![JSON](https://img.shields.io/badge/-JSON-green)
+![JSON](https://img.shields.io/badge/JSON-000000?logo=json)
 ![Markdown](https://img.shields.io/badge/Markdown-000000?logo=markdown)
-![npm](https://img.shields.io/badge/-npm-red)
+![npm](https://img.shields.io/badge/npm-CB3837?logo=npm)
 ![Cheerio](https://img.shields.io/badge/-Cheerio-orange)
-![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript)
 ![React](https://img.shields.io/badge/-React-blue)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-blueviolet)
 ![ESLint](https://img.shields.io/badge/-ESLint-purple)

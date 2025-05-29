@@ -15,7 +15,7 @@
 ![JSON](https://img.shields.io/badge/JSON-green?logo=json)
 ![Markdown](https://img.shields.io/badge/Markdown-gray?logo=markdown)
 ![npm](https://img.shields.io/badge/npm-CB3837?logo=npm)
-![Cheerio](https://img.shields.io/badge/Cheerio-CB3837?logo=cheerio)
+![Cheerio](https://img.shields.io/badge/Cheerio-a85a2a?logo=cheerio)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1A?logo=javascript)
 ![React](https://img.shields.io/badge/-React-blue?logo=react)
 ![TypeScript](https://img.shields.io/badge/-TypeScript-blueviolet?logo=typescript)

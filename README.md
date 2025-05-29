@@ -67,14 +67,36 @@ Build dokunote from the source and install dependencies:
 
 1. **Clone the repository**:
 
-```bash
-git clone https://github.com/Hirusha-Nikson/dokunote
+  ```bash
+  git clone https://github.com/Hirusha-Nikson/dokunote
 
-```
+  ```
 Or extract the ZIP file
 
-2. **Navigate to the project directory
-   
+2. **Navigate to the project directory**:
+   ```bash
+   >cd dokunote
+   ```
+
+3. **Install the dependencies**:
+   Using npm
+   ```bash
+   > npm install
+   ```
+
+###Usage
+Run the project with:
+
+Using npm:
+
+```bash
+npm run dev
+```
+or
+```bash
+npm start
+```
+
 
 
 

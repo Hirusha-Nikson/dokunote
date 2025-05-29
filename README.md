@@ -110,8 +110,8 @@ OR
 
 Use the following test email address:
 
-Email: dokunoteweb@gmail.com
-Password: J-b6Y7PLrv-yE.w
+-Email: dokunoteweb@gmail.com
+-Password: J-b6Y7PLrv-yE.w
 
 
 

@@ -75,7 +75,7 @@ Or extract the ZIP file
 
 2. **Navigate to the project directory**:
    ```bash
-   >cd dokunote
+   > cd dokunote
    ```
 
 3. **Install the dependencies**:

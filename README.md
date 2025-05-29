@@ -17,11 +17,11 @@
 ![npm](https://img.shields.io/badge/npm-CB3837?logo=npm)
 ![Cheerio](https://img.shields.io/badge/Cheerio-orange?logo=cheerio)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1A?logo=javascript)
-![React](https://img.shields.io/badge/-React-blue)
-![TypeScript](https://img.shields.io/badge/-TypeScript-blueviolet)
-![ESLint](https://img.shields.io/badge/-ESLint-purple)
-![Axios](https://img.shields.io/badge/-Axios-magenta)
-![dateFns](https://img.shields.io/badge/-dateFns-violet)
+![React](https://img.shields.io/badge/-React-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/-TypeScript-blueviolet?logo=typescript)
+![ESLint](https://img.shields.io/badge/-ESLint-purple?logo=eslint)
+![Axios](https://img.shields.io/badge/-Axios-magenta?logo=axios)
+![dateFns](https://img.shields.io/badge/-dateFns-violet?logo=datefns)
 
 ---
 

@@ -30,7 +30,7 @@
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Testing](#testing)
+  - [Note](#note)
 
 ---
 
@@ -100,6 +100,11 @@ or
 npm start
 ```
 
+---
+
+### Note
+
+Dokunnote is powered with **CONVEX** backend, So if you faced a issue when run the backend. follow these steps.
 
 
 

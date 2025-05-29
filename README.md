@@ -13,7 +13,7 @@
 ### Built with the tools and technologies:
 
 ![JSON](https://img.shields.io/badge/-JSON-green)
-![Markdown](https://img.shields.io/badge/-Markdown-lightgrey)
+![Markdown](https://img.shields.io/badge/Markdown-000000?logo=markdown)
 ![npm](https://img.shields.io/badge/-npm-red)
 ![Cheerio](https://img.shields.io/badge/-Cheerio-orange)
 ![JavaScript](https://img.shields.io/badge/-JavaScript-yellow)

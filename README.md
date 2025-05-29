@@ -56,7 +56,7 @@ This project empowers users to create, share, and manage notes effectively while
 
 This project requires the following dependencies:
 
-- **Programming Language**: TypeScript  
+- **Programming Language**: TypeScript | React.js | Next.js
 - **Package Manager**: Npm
 
 ---
@@ -75,7 +75,7 @@ Or extract the ZIP file
 
 2. **Navigate to the project directory**:
    ```bash
-   > cd dokunote
+   > cd dokunote-main
    ```
 
 3. **Install the dependencies**:
@@ -84,6 +84,10 @@ Or extract the ZIP file
    ```bash
    > npm install
    ```
+  Or, if you had a problem installing dependencies, use:
+  ```bash
+  > npm install --legacy-peer-deps
+  ```
 
 
 ### Usage
@@ -95,16 +99,21 @@ Using npm:
 ```bash
 npm run dev
 ```
-or
-```bash
-npm start
-```
 
 ---
 
 ### Note
 
-Dokunnote is powered with **CONVEX** backend, So if you faced a issue when run the backend. follow these steps.
+Dokunnote is powered by **CONVEX** backend and **Clerk** user authentication. So you can sign up with your own Gmail or Github account.
+
+OR
+
+Use the following test email address:
+
+Email: dokunoteweb@gmail.com
+Password: J-b6Y7PLrv-yE.w
+
+
 
 
 

@@ -2,15 +2,15 @@
 
 *Empower collaboration, streamline your note-taking journey.*
 
-![Last Commit](https://img.shields.io/github/last-commit/iirusha-Wikson/dokunote)
+![Last Commit](https://img.shields.io/github/last-commit/Hirusha-Nikson/dokunote)
 ![TypeScript](https://img.shields.io/badge/typescript-96.4%25-blue)
-![Languages](https://img.shields.io/github/languages/count/iirusha-Wikson/dokunote)
+![Languages](https://img.shields.io/github/languages/count/Hirusha-Nikson/dokunote)
 
 ---
 
 ### Built with the tools and technologies:
 
-![JSON](https://img.shields.io/badge/-JSON-black)
+![JSON](https://img.shields.io/badge/-JSON-green)
 ![Markdown](https://img.shields.io/badge/-Markdown-lightgrey)
 ![npm](https://img.shields.io/badge/-npm-red)
 ![Cheerio](https://img.shields.io/badge/-Cheerio-orange)
@@ -68,7 +68,13 @@ Build dokunote from the source and install dependencies:
 1. **Clone the repository**:
 
 ```bash
-git clone https://github.com/iirusha-Wikson/dokunote
+git clone https://github.com/Hirusha-Nikson/dokunote
+
+```
+Or extract the ZIP file
+
+2. **Navigate to the project directory
+   
 
 
 
